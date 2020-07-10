@@ -1,0 +1,138 @@
+body {
+    background-image: url('images/bg-intro-mobile.png');
+    background-color: hsl(0, 100%, 74%);
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+header p {
+    font-size: 16px;
+}
+
+main {
+    width: 90%;
+    margin: 120px auto;
+}
+
+section {
+    margin: auto 24px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+input {
+    border: solid 1;
+    border-radius: 10px;
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 12px 0;
+    padding-left: 24px;
+    height: 48px;
+    width: 94%;
+}
+
+form {
+    padding: 16px;
+}
+
+button {
+    box-shadow: 0 1px 4px hsl(249, 10%, 26%);
+    background-color: hsl(154, 59%, 51%);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    height: 60px;
+    width: 100%;
+}
+
+.footnote {
+    color: hsl(246, 25%, 77%);
+    font-size: 12px;
+    text-align: center;
+}
+
+.footnote-link {
+    color: hsl(0, 100%, 74%) ;
+}
+
+.form-entry {
+    box-shadow: 0 3px 12px hsl(249, 10%, 26%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 36px auto;
+}
+
+.trial-bg {
+    box-shadow: 0 3px 12px hsl(249, 10%, 26%);
+    background-color: hsl(248, 32%, 49%);
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 0;
+    height: 90px;
+    text-align: center;
+}
+
+.trial-text {
+    padding-top: 16px;
+}
+
+.faded-text {
+    opacity: .8;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+}
+
+.item {
+    flex: 1;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+@media all and (min-width: 760px) {
+    body {
+        background-image: url('images/bg-intro-desktop.png');
+    }
+
+    header {
+        text-align: left;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .trial-bg {
+        font-size: 16px;
+        height: 60px;
+        padding: 0;
+    }
+
+    .group {
+        flex-direction: row;
+    }
+}
