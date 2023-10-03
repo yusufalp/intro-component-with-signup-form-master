@@ -1,41 +1,29 @@
-function validateName(name, type) {
-  const inputField = document.getElementById(type);
+function validateInput(value, field) {
+  const inputField = document.getElementById(field);
   inputField.classList.remove("bg-image");
 
-  const errorField = document.getElementsByClassName(type);
+  const errorField = document.getElementsByClassName(field);
   errorField[0].classList.add("hidden");
 
-  if (name.trim() === "") {
+  if (value.trim() === "") {
     errorField[0].classList.remove("hidden");
     inputField.classList.add("bg-image");
   }
-}
 
-function validateEmail(email) {
-  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]/;
+  if (field === "email") {
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]/;
 
-  const inputField = document.getElementById("email");
-  inputField.classList.remove("bg-image");
-
-  const errorField = document.getElementsByClassName("email");
-  errorField[0].classList.add("hidden");
-
-  if (email.trim() === "" || !emailPattern.test(email)) {
-    errorField[0].classList.remove("hidden");
-    inputField.classList.add("bg-image");
+    if (!emailPattern.test(value)) {
+      errorField[0].classList.remove("hidden");
+      inputField.classList.add("bg-image");
+    }
   }
-}
 
-function validatePassword(password) {
-  const inputField = document.getElementById("password");
-  inputField.classList.remove("bg-image");
-
-  const errorField = document.getElementsByClassName("password");
-  errorField[0].classList.add("hidden");
-
-  if (password.trim() === "" || password.length < 8) {
-    errorField[0].classList.remove("hidden");
-    inputField.classList.add("bg-image");
+  if (field === "password") {
+    if (value.length < 8) {
+      errorField[0].classList.remove("hidden");
+      inputField.classList.add("bg-image");
+    }
   }
 }
 
@@ -52,10 +40,10 @@ function waitForSubmit() {
     const userEmail = infoFormElements["email"].value;
     const userPassword = infoFormElements["password"].value;
 
-    validateName(userFirstName, "firstName");
-    validateName(userLastName, "lastName");
-    validateEmail(userEmail);
-    validatePassword(userPassword);
+    validateInput(userFirstName, "firstName");
+    validateInput(userLastName, "lastName");
+    validateInput(userEmail, "email");
+    validateInput(userPassword, "password");
   });
 }
 
