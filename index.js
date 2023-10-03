@@ -1,40 +1,62 @@
-function validate(firstName, lastName, email, password) {
-    $('.error-message').addClass('hidden');
-    $('input').removeClass('bg-image');
-    if (firstName == '') {
-        $('.first-name').removeClass('hidden');
-        $('#first-name').addClass('bg-image');
-    }
-    if (lastName == '') {
-        $('.last-name').removeClass('hidden');
-        $('#last-name').addClass('bg-image');
-    }
-    if (!(email.includes('@') && email.includes('.'))) {
-        if (email == '') {
-            $('.email-alt').removeClass('hidden');
-            $('#user-email').addClass('bg-image');
-        } else {
-            $('.email').removeClass('hidden');
-            $('#user-email').addClass('bg-image');
-        }
-    }
+function validateName(name, type) {
+  const inputField = document.getElementById(type);
+  inputField.classList.remove("bg-image");
 
-    if (password == '') {
-        $('.password').removeClass('hidden');
-        $('#user-password').addClass('bg-image');
-    }
+  const errorField = document.getElementsByClassName(type);
+  errorField[0].classList.add("hidden");
 
+  if (name.trim() === "") {
+    errorField[0].classList.remove("hidden");
+    inputField.classList.add("bg-image");
+  }
+}
+
+function validateEmail(email) {
+  const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]/;
+
+  const inputField = document.getElementById("email");
+  inputField.classList.remove("bg-image");
+
+  const errorField = document.getElementsByClassName("email");
+  errorField[0].classList.add("hidden");
+
+  if (email.trim() === "" || !emailPattern.test(email)) {
+    errorField[0].classList.remove("hidden");
+    inputField.classList.add("bg-image");
+  }
+}
+
+function validatePassword(password) {
+  const inputField = document.getElementById("password");
+  inputField.classList.remove("bg-image");
+
+  const errorField = document.getElementsByClassName("password");
+  errorField[0].classList.add("hidden");
+
+  if (password.trim() === "" || password.length < 8) {
+    errorField[0].classList.remove("hidden");
+    inputField.classList.add("bg-image");
+  }
 }
 
 function waitForSubmit() {
-    $('form').submit(e => {
-        e.preventDefault();
-        let firstName = $('#first-name').val();
-        let lastName = $('#last-name').val();
-        let email = $('#user-email').val();
-        let password = $('#user-password').val();
-        validate(firstName, lastName, email, password);
-    })
+  const infoForm = document.getElementById("info-form");
+
+  infoForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const infoFormElements = infoForm.elements;
+
+    const userFirstName = infoFormElements["firstName"].value;
+    const userLastName = infoFormElements["lastName"].value;
+    const userEmail = infoFormElements["email"].value;
+    const userPassword = infoFormElements["password"].value;
+
+    validateName(userFirstName, "firstName");
+    validateName(userLastName, "lastName");
+    validateEmail(userEmail);
+    validatePassword(userPassword);
+  });
 }
 
-$(waitForSubmit);
+waitForSubmit();
