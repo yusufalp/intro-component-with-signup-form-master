@@ -1,156 +1,144 @@
 body {
-    background-image: url('images/bg-intro-mobile.png');
-    background-color: hsl(0, 100%, 74%);
-    color: #ffffff;
-    font-family: 'Poppins', sans-serif;
+  background-image: url("images/bg-intro-mobile.png");
+  background-color: hsl(0, 100%, 74%);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
 
 header {
-    text-align: center;
+  text-align: center;
 }
 
 header p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 main {
-    width: 90%;
-    margin: 120px auto;
+  width: 90%;
+  margin: 120px auto;
 }
 
 section {
-    margin: auto 24px;
+  margin: auto 24px;
 }
 
 h1 {
-    font-size: 2rem;
-    font-weight: 600;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .bg-image {
-    background-image: url(images/icon-error.svg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-origin: content-box, content-box;
+  background-image: url(images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-origin: content-box, content-box;
 }
 
 input {
-    border: solid 1;
-    border-radius: 10px;
-    display: block;
-    font-size: 1rem;
-    font-weight: bold;
-    margin: 12px 0;
-    padding-left: 24px;
-    height: 48px;
-    width: 94%;
+  border: solid 1;
+  border-radius: 10px;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 12px 0;
+  padding-left: 24px;
+  height: 48px;
+  width: 94%;
 }
 
 form {
-    padding: 16px;
+  padding: 16px;
 }
 
 button {
-    box-shadow: 0 1px 4px hsl(249, 10%, 26%);
-    background-color: hsl(154, 59%, 51%);
-    color: #ffffff;
-    border: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    text-transform: uppercase;
-    height: 60px;
-    width: 100%;
+  box-shadow: 0 1px 4px hsl(249, 10%, 26%);
+  background-color: hsl(154, 59%, 51%);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  height: 60px;
+  width: 100%;
 }
 
 .footnote {
-    color: hsl(246, 25%, 77%);
-    font-size: 12px;
-    text-align: center;
+  color: hsl(246, 25%, 77%);
+  font-size: 12px;
+  text-align: center;
 }
 
 .footnote-link {
-    color: hsl(0, 100%, 74%) ;
+  color: hsl(0, 100%, 74%);
 }
 
 .form-entry {
-    box-shadow: 0 3px 12px hsl(249, 10%, 26%);
-    background-color: #ffffff;
-    border-radius: 10px;
-    padding: 12px;
-    margin: 36px auto;
+  box-shadow: 0 3px 12px hsl(249, 10%, 26%);
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 36px auto;
 }
 
 .trial-bg {
-    box-shadow: 0 3px 12px hsl(249, 10%, 26%);
-    background-color: hsl(248, 32%, 49%);
-    border-radius: 10px;
-    font-size: 20px;
-    padding: 0;
-    height: 90px;
-    text-align: center;
-}
-
-.trial-text {
-    padding-top: 16px;
+  box-shadow: 0 3px 12px hsl(249, 10%, 26%);
+  background-color: hsl(248, 32%, 49%);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 .faded-text {
-    opacity: .8;
+  opacity: 0.8;
 }
 
 .error-message {
-    color: hsl(0, 100%, 74%);
-    float: right;
-    font-weight: 700;
-    margin: 0 0 12px 0;
+  color: hsl(0, 100%, 74%);
+  float: right;
+  font-weight: 700;
+  margin: 0 0 12px 0;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .group {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.item {
-    flex: 1;
+.info-section {
+  flex: 2;
+}
+
+.form-section {
+  flex: 5;
 }
 
 .attribution {
-    font-size: 11px;
-    text-align: center;
+  font-size: 11px;
+  text-align: center;
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+  color: hsl(228, 45%, 44%);
 }
 
-@media all and (min-width: 760px) {
-    body {
-        background-image: url('images/bg-intro-desktop.png');
-    }
+@media all and (min-width: 900px) {
+  body {
+    background-image: url("images/bg-intro-desktop.png");
+  }
 
-    header {
-        text-align: left;
-    }
+  header {
+    text-align: left;
+  }
 
-    main {
-        width: 80%;
-    }
+  h1 {
+    font-size: 3rem;
+  }
 
-    h1 {
-        font-size: 3rem;
-    }
-
-    .trial-bg {
-        font-size: 16px;
-        height: 60px;
-        padding: 0;
-    }
-
-    .group {
-        flex-direction: row;
-    }
+  .group {
+    flex-direction: row;
+  }
 }
