@@ -1,8 +1,17 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   background-image: url("images/bg-intro-mobile.png");
   background-color: hsl(0, 100%, 74%);
   color: #ffffff;
   font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 header {
@@ -22,11 +31,6 @@ section {
   margin: auto 24px;
 }
 
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
 .bg-image {
   background-image: url(images/icon-error.svg);
   background-repeat: no-repeat;
@@ -34,20 +38,27 @@ h1 {
   background-origin: content-box, content-box;
 }
 
-input {
-  border: solid 1;
+.form-entry {
+  box-shadow: 0 3px 12px hsl(249, 10%, 26%);
+  background-color: #ffffff;
   border-radius: 10px;
-  display: block;
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 12px 0;
-  padding-left: 24px;
-  height: 48px;
-  width: 94%;
+  padding: 12px;
+  margin: 36px auto;
 }
 
 form {
   padding: 16px;
+}
+
+input {
+  border-radius: 10px;
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  text-indent: 12px;
+  margin: 12px 0;
+  height: 48px;
+  width: 100%;
 }
 
 button {
@@ -72,14 +83,6 @@ button {
   color: hsl(0, 100%, 74%);
 }
 
-.form-entry {
-  box-shadow: 0 3px 12px hsl(249, 10%, 26%);
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 12px;
-  margin: 36px auto;
-}
-
 .trial-bg {
   box-shadow: 0 3px 12px hsl(249, 10%, 26%);
   background-color: hsl(248, 32%, 49%);
@@ -94,9 +97,10 @@ button {
 
 .error-message {
   color: hsl(0, 100%, 74%);
-  float: right;
+  display: flex;
+  justify-content: flex-end;
   font-weight: 700;
-  margin: 0 0 12px 0;
+  margin: -6px 0 0px 0;
 }
 
 .hidden {
@@ -128,6 +132,8 @@ button {
 @media all and (min-width: 900px) {
   body {
     background-image: url("images/bg-intro-desktop.png");
+    width: 75%;
+    margin:auto
   }
 
   header {
