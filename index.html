@@ -70,45 +70,46 @@
           </p>
         </div>
         <div class="form-entry">
-          <form>
-            <label for="first-name"></label>
+          <form id="info-form"">
+            <label for="firstName"></label>
             <input
-              id="first-name"
+              id="firstName"
               class=""
               type="text"
-              name="firstName"
               placeholder="First Name"
             />
-            <p class="error-message first-name hidden">
-              First Name cannot be empty
+            <p class="error-message firstName hidden">
+              First name cannot be blank.
             </p>
-            <label for="last-name"></label>
+            <label for="lastName"></label>
             <input
-              id="last-name"
+              id="lastName"
               class=""
               type="text"
               placeholder="Last Name"
             />
-            <p class="error-message last-name hidden">
-              Last Name cannot be empty
+            <p class="error-message lastName hidden">
+              Last name cannot be blank.
             </p>
-            <label for="user-email"></label>
-            <input id="user-email" class="" type="text" placeholder="Email" />
-            <p class="error-message email-invalid hidden">
+            <label for="email"></label>
+            <input 
+              id="email" 
+              class="" 
+              type="text" 
+              placeholder="Email" 
+            />
+            <p class="error-message email hidden">
               Looks like this is not an email
             </p>
-            <p class="error-message email-empty hidden">
-              Email cannot be empty
-            </p>
-            <label for="user-password"></label>
+            <label for="password"></label>
             <input
-              id="user-password"
+              id="password"
               class=""
               type="password"
               placeholder="Password"
             />
             <p class="error-message password hidden">
-              Password cannot be empty
+              Password needs to be at least 8 characters.
             </p>
             <button type="submit">Claim Your Free Trial</button>
             <p class="footnote">
